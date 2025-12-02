@@ -205,6 +205,11 @@ export async function POST(req) {
         { status: 200 }
       );
     }
+
+    return new Response(
+      JSON.stringify({ success: false, error: 'Екшена такого неіснує' }),
+      { status: 418 }
+    );
   } catch (error) {
     console.error("Google Sheets API error:", error);
     return new Response(
