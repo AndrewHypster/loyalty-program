@@ -1,0 +1,39 @@
+.main-title {
+  font-size: 3rem;
+  line-height: 1em;
+}
+
+.main-title small {
+  font-size: 0.3em;
+  line-height: 1.2em;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgb(179, 179, 179);
+  display: block;
+}
+
+.main-content {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.main-btns {
+  margin-top: 5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.main-btn {
+  padding: .5rem 1.5rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+  border: .1rem solid var(--yellow);
+  border-radius: 1000vw;
+}
+
+.main-btn:hover {
+  border-color: aliceblue;
+  transform: translateY(5%);
+}
