@@ -179,15 +179,15 @@ export async function POST(req) {
         range: "clients!",
         element: body.phone,
       });
-      console.log(client, "CLIENT");
 
-      if (!client)
+      if (!client) {
         return new Response(
           JSON.stringify({ success: false, msg: "Клієнта такого нема" }),
           {
             status: 200,
           }
         );
+      }
 
       const range = `clients!B${client.index}`;
 
@@ -207,7 +207,7 @@ export async function POST(req) {
     }
 
     return new Response(
-      JSON.stringify({ success: false, error: 'Екшена такого неіснує' }),
+      JSON.stringify({ success: false, error: "Екшена такого неіснує" }),
       { status: 418 }
     );
   } catch (error) {
