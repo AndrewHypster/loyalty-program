@@ -13,6 +13,12 @@ html {
   color: aliceblue;
 }
 
+@media (max-width: 480px) {
+  html {
+    font-size: 3.75vw;
+  }
+}
+
 body {
   min-height: 100dvh;
   background-color: #1e1e1e;
@@ -22,7 +28,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 main {

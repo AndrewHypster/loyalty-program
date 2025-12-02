@@ -1,0 +1,67 @@
+.profile-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  color: transparent;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.profile-loading::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 145%;
+  content: 'Зачекайте...';
+  color: aliceblue;
+  justify-content: right;
+  animation: load 4s linear infinite;
+  display: flex;
+}
+
+@keyframes load {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.profile-card, .profile-err {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 2rem 3rem;
+  background-color: aliceblue;
+  border-radius: 2rem;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 750px) {
+  .profile-card {
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+@media (max-width: 410px) {
+  .profile-card {
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+.profile-err {
+  color: rgb(185, 18, 18);
+}
