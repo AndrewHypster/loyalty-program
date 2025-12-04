@@ -14,25 +14,9 @@ export default function Home() {
   console.log(session);
 
   useEffect(() => {
-    async function w() {
-      const resp = await fetch("/api/google-sheets", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          action: "FIND_CLIENT",
-          phone: "0685325881",
-          bonus: "1",
-        }),
-      });
-
-      const data = await resp.json();
-      console.log(data);
-    }
-    // w()
-  }, []);
+    
+    
+  }, [session]);
 
   return (
     <main className="main-page">
